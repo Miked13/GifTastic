@@ -1,5 +1,13 @@
-.sidenav{
+.jumbotron{
+    background-color: #85144b;
+    color: #39CCCC;
+}
 
+.col-4{
 
+    background: #85144b;
+}
 
+.col-8{
+    display: inline-block;
 }
