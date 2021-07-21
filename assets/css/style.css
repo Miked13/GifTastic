@@ -1,11 +1,15 @@
 .jumbotron{
     background-color: #85144b;
-    color: #39CCCC;
+    color: white;
 }
 
-.col-4{
+.blink_me{
+    animation: blinker 2s linear infinite;
+    color: gold;
+}
 
-    background: #85144b;
+@keyframes blinker {
+    50% {opacity: 0;}
 }
 
 .col-8{
