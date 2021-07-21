@@ -16,22 +16,23 @@
     <div class="container-fluid">
         <div class = "row">
             <div class = "col-12">
-                <div class="jumbotron jumbotron-fluid">
+                <div class="jumbotron">
                     <div class="container">
-                        <h1 class="display-3">GIFTASTIC</h1>
-                        <p class="lead">Cartoon Gifs</p>
+                        <h1 class="display-2 text-center blink_me">GIFTASTIC</h1>
+                        <p class="lead text-center">This is a website to display gifs using the "Giphy" API with the possibility to turn on or off the animation with a click.</p>
                         <hr class="my-2">
-                        <p>Add more gifs to the list by adding buttons</p>
+                        <!-- <p>Add more gifs to the list by adding buttons</p> -->
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-term" placeholder="Add a button" aria-label="Add a button" aria-describedby="basic-addon2">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search-term" placeholder="Search..." aria-label="Type a gif" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-info" id="addGif" type="button">Add</button>
+                        <button class="btn btn-outline-success" id="addGif" type="button">Add</button>
+                        <button class="btn btn-outline-danger" id="clearGif" type="button">Clear</button>
                     </div>
                 </div>
                 <div id = "buttonContainer">
