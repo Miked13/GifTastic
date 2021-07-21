@@ -1,20 +1,25 @@
 $(document).ready(function () {
-    var cartoons = ["Looney Tunes", "Tom and Jerry", "The Ren & Stimpy Show", "Ed, Edd, & Eddy", "Dexter's Laboratory", "Tex Avery", "Beavis and Butt-head", "Animaniacs"];
+    var gifs = [];
     //function to add a button by typing in the search bar
     function addButton() {
         $("#buttonContainer").empty();
-        for (var i = 0; i < cartoons.length; i++) {
+        for (var i = 0; i < gifs.length; i++) {
             var newButton = $("<button>");
-            newButton.addClass("btn btn-info");
-            newButton.attr("data-name", cartoons[i]);
-            newButton.text(cartoons[i]);
+            newButton.addClass("btn btn-outline-dark");
+            newButton.attr("data-name", gifs[i]);
+            newButton.text(gifs[i]);
             $("#buttonContainer").append(newButton);
         }
     }
     $("#addGif").on("click", function () {
         var cartoon = $("#search-term").val();
-        cartoons.push(cartoon);
+        gifs.push(cartoon);
         addButton();
+    });
+
+    $("#clearGif").on("click", function () {
+        $("#buttonContainer").empty();
+        $("#result").empty();
     });
     //function to dispay gifs when user clicks on gif buttons
     function displayGif() {
@@ -53,7 +58,7 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
     });
-    $(document).on("click", ".btn-info",displayGif);
+    $(document).on("click", ".btn-outline-dark",displayGif);
     $("#result").empty();
     addButton();
     
